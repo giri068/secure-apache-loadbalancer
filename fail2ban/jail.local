@@ -1,0 +1,9 @@
+[apache-403]
+enabled = true
+port    = http,https
+backend = polling
+filter  = apache-403
+logpath = /var/log/apache2/lb_access.log
+maxretry = 5
+findtime = 300
+bantime = 3600
