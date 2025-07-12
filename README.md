@@ -1,77 +1,56 @@
-Here’s a **simple and clean `README.md`** version you can copy-paste directly:
+🔐 Secure Apache2 Load Balancer Project
+This project simulates a real-world secure web infrastructure using Apache2 as a reverse proxy with:
 
----
+✅ HTTPS (TLS with self-signed cert)
 
-```markdown
-🔐 Secure Apache2 Reverse Proxy + Load Balancer Lab
+⚖️ Load balancing to backend servers
 
-A professional-level lab simulating enterprise web infrastructure using Apache2 with:
+🧱 ModSecurity WAF protection
 
-- ✅ HTTPS (Self-Signed TLS)
-- ✅ Reverse Proxy & Load Balancing
-- ✅ ModSecurity WAF (OWASP CRS)
-- ✅ Fail2Ban (Brute-force protection)
-- ✅ GoAccess (Real-time traffic monitoring)
-- ✅ Python backend servers
+🚫 Fail2Ban to block malicious traffic
 
----
+📊 Real-time monitoring using GoAccess
 
-🧱 Lab Setup
+🧪 Lab Setup
+Role	OS	IP Address	Purpose
+Load Balancer	Ubuntu 22.04	192.168.56.115	Apache2 with TLS, Reverse Proxy, WAF
+Web Server 1	Parrot OS	192.168.56.114	Python HTTP server with website
+Web Server 2	Parrot OS	192.168.56.116	Python HTTP server with website replica
+Blue Team Monitor	Kali Linux	192.168.56.113	Logs monitoring (GoAccess + Fail2Ban)
 
-| Role              | OS          | IP               | Purpose                                  |
-|-------------------|-------------|------------------|------------------------------------------|
-| 🔐 Load Balancer  | Ubuntu 22.04| 192.168.56.115   | Apache2 + TLS + WAF + Load Balancer      |
-| 🟢 Web Server 1   | Parrot OS   | 192.168.56.114   | Python HTTP server (web content)         |
-| 🟢 Web Server 2   | Parrot OS   | 192.168.56.116   | Python HTTP server (web content)         |
-| 👮 Blue Team SOC  | Kali Linux  | 192.168.56.113   | Log Monitoring (GoAccess, Fail2Ban)      |
 
----
+🚀 How It Works
+🖥️ Web1 & Web2 serve websites using Python’s http.server
 
----
+🔄 Apache load balances traffic with HTTPS
 
-🔧 Key Commands
+🔐 ModSecurity blocks common web attacks
 
-**Start Python servers:**
-```python3 -m http.server 8080 --bind 0.0.0.0
-````
+🚫 Fail2Ban blocks repeated 403/404 brute-force attempts
 
-**Enable Apache modules:**
+👁️ GoAccess visualizes live traffic logs in browser
 
-```bash
-a2enmod proxy proxy_http proxy_balancer ssl headers
-```
+📷 Screenshots
+Apache Load Balancing
 
-**Generate TLS cert:**
+GoAccess Live Dashboard
 
-```bash
-bash generate-cert.sh
-```
+WAF Blocking Logs
 
-**Start GoAccess real-time:**
+Fail2Ban Banned IPs
 
-```bash
-goaccess /var/log/apache2/lb_access.log -o /html/report.html --real-time-html
-```
+Backend Web Pages
 
----
-🛡️ Real-World Use
+📦 Tools Used
+Apache2
 
-* Reverse Proxy hides backend IPs
-* TLS ensures encryption
-* ModSecurity blocks attacks (WAF)
-* Fail2Ban blocks brute-force
-* GoAccess monitors web traffic
+Python3 HTTP Server
 
----
-📸 Screenshots (in folders)
+ModSecurity
 
-* Web servers: `webservers/`
-* WAF & GoAccess: `monitoring/`
-* Fail2Ban blocks: `fail2ban/`
+Fail2Ban
 
----
+GoAccess
 
-## ✍️ Author
+Bash scripting
 
-James — [LinkedIn](https://linkedin.com/in/giribabuetteri)
-``
