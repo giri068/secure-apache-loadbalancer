@@ -14,12 +14,15 @@ Real-time log monitoring with GoAccess
 
 Python HTTP servers acting as backend apps
 
-🧪 Lab Overview
-Apache2 (Ubuntu): Acts as reverse proxy with TLS, WAF, and load balancer
+### 🧪 Lab Overview
 
-Parrot OS (2x): Host backend websites using python3 -m http.server
+| Role                | OS           | IP Address       | Purpose                                                  |
+|---------------------|--------------|------------------|----------------------------------------------------------|
+| 🔐 Load Balancer    | Ubuntu 22.04 | 192.168.56.115   | Apache2 with TLS, Reverse Proxy, Load Balancer, WAF     |
+| 🟢 Web Server 1     | Parrot OS    | 192.168.56.114   | Backend website using `python3 -m http.server`          |
+| 🟢 Web Server 2     | Parrot OS    | 192.168.56.116   | Backend website using `python3 -m http.server`          |
+| 👮 Blue Team (SOC)  | Kali Linux   | 192.168.56.113   | Monitors logs (GoAccess), WAF blocks, Fail2Ban alerts   |
 
-Kali Linux: Blue Team system for monitoring and blocking attacks
 
 🛠 Tools Used
 Apache2
