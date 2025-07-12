@@ -1,47 +1,27 @@
-🔐 Secure Apache2 Load Balancer Project
-This project simulates a real-world secure web infrastructure using Apache2 as a reverse proxy with:
+🔐 Secure Apache2 Load Balancer Lab
+A real-world simulation of a secure web infrastructure using Apache2 on Ubuntu.
 
-✅ HTTPS (TLS with self-signed cert)
+✅ Key Features
+HTTPS with self-signed TLS certificate
 
-⚖️ Load balancing to backend servers
+Reverse proxy with load balancing
 
-🧱 ModSecurity WAF protection
+Web Application Firewall (ModSecurity)
 
-🚫 Fail2Ban to block malicious traffic
+Brute-force protection using Fail2Ban
 
-📊 Real-time monitoring using GoAccess
+Real-time log monitoring with GoAccess
 
-🧪 Lab Setup
-Role	OS	IP Address	Purpose
-Load Balancer	Ubuntu 22.04	192.168.56.115	Apache2 with TLS, Reverse Proxy, WAF
-Web Server 1	Parrot OS	192.168.56.114	Python HTTP server with website
-Web Server 2	Parrot OS	192.168.56.116	Python HTTP server with website replica
-Blue Team Monitor	Kali Linux	192.168.56.113	Logs monitoring (GoAccess + Fail2Ban)
+Python HTTP servers acting as backend apps
 
+🧪 Lab Overview
+Apache2 (Ubuntu): Acts as reverse proxy with TLS, WAF, and load balancer
 
-🚀 How It Works
-🖥️ Web1 & Web2 serve websites using Python’s http.server
+Parrot OS (2x): Host backend websites using python3 -m http.server
 
-🔄 Apache load balances traffic with HTTPS
+Kali Linux: Blue Team system for monitoring and blocking attacks
 
-🔐 ModSecurity blocks common web attacks
-
-🚫 Fail2Ban blocks repeated 403/404 brute-force attempts
-
-👁️ GoAccess visualizes live traffic logs in browser
-
-📷 Screenshots
-Apache Load Balancing
-
-GoAccess Live Dashboard
-
-WAF Blocking Logs
-
-Fail2Ban Banned IPs
-
-Backend Web Pages
-
-📦 Tools Used
+🛠 Tools Used
 Apache2
 
 Python3 HTTP Server
@@ -54,3 +34,11 @@ GoAccess
 
 Bash scripting
 
+📸 Highlights
+Load balanced backend web traffic
+
+Live traffic logs dashboard
+
+Blocked attack IPs
+
+WAF rules in action
