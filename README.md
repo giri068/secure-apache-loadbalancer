@@ -3,7 +3,7 @@ Here’s a **simple and clean `README.md`** version you can copy-paste directly:
 ---
 
 ```markdown
-# 🔐 Secure Apache2 Reverse Proxy + Load Balancer Lab
+🔐 Secure Apache2 Reverse Proxy + Load Balancer Lab
 
 A professional-level lab simulating enterprise web infrastructure using Apache2 with:
 
@@ -16,7 +16,7 @@ A professional-level lab simulating enterprise web infrastructure using Apache2 
 
 ---
 
-## 🧱 Lab Setup
+🧱 Lab Setup
 
 | Role              | OS          | IP               | Purpose                                  |
 |-------------------|-------------|------------------|------------------------------------------|
@@ -27,7 +27,7 @@ A professional-level lab simulating enterprise web infrastructure using Apache2 
 
 ---
 
-## 📁 Folder Structure
+📁 Folder Structure
 
 ```
 
@@ -43,7 +43,7 @@ secure-apache2-loadbalancer/
 
 ---
 
-## 🔧 Key Commands
+🔧 Key Commands
 
 **Start Python servers:**
 ```bash
@@ -69,8 +69,7 @@ goaccess /var/log/apache2/lb_access.log -o /html/report.html --real-time-html
 ```
 
 ---
-
-## 🛡️ Real-World Use
+🛡️ Real-World Use
 
 * Reverse Proxy hides backend IPs
 * TLS ensures encryption
@@ -79,8 +78,7 @@ goaccess /var/log/apache2/lb_access.log -o /html/report.html --real-time-html
 * GoAccess monitors web traffic
 
 ---
-
-## 📸 Screenshots (in folders)
+📸 Screenshots (in folders)
 
 * Web servers: `webservers/`
 * WAF & GoAccess: `monitoring/`
