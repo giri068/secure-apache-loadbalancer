@@ -27,27 +27,12 @@ A professional-level lab simulating enterprise web infrastructure using Apache2 
 
 ---
 
-📁 Folder Structure
-
-```
-
-secure-apache2-loadbalancer/
-├── apache/              → Apache configs (TLS, WAF, ports)
-├── fail2ban/            → Jail config & banned IPs
-├── monitoring/          → GoAccess reports & WAF logs
-├── scripts/             → Setup & monitoring scripts
-├── webservers/          → Web server previews & assets
-└── README.md
-
-````
-
 ---
 
 🔧 Key Commands
 
 **Start Python servers:**
-```bash
-python3 -m http.server 8080 --bind 0.0.0.0
+```python3 -m http.server 8080 --bind 0.0.0.0
 ````
 
 **Enable Apache modules:**
